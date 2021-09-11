@@ -4,3 +4,4 @@ Cardiovascular diseases are the number 1 cause of death globally, taking an esti
 Early detection, and managment of cardiovascular diseases can be a great way to manage the fatality rate associated with cardiovascular diseases, and this is where a machine learning model comes in. 
 
 For the purpose of predicting the risk of a  heart failure in patients, I used the Logistic Regression  Classifier to build a machine learning model, and deployed it using Flask and Heroku.
+You can use the deployed model at : https://risk-of-heart-failure.herokuapp.com/

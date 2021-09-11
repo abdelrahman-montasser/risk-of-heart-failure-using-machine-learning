@@ -23,8 +23,13 @@ def predict():
     prediction = model.predict(final_features)
 
     output = round(prediction[0], 2)
+    if(output==1):
+        return render_template('index.html', prediction_text='Have high Risk of heart failure ! ☹')
+    else:
+        return render_template('index.html', prediction_text='Low Risk of heart failure 😃')
 
-    return render_template('index.html', prediction_text='Risk of heart failure (0 for low risk,1 for high risk) :{}'.format(output))
+        
+   # return render_template('index.html', prediction_text='Risk of heart failure (0 for low risk,1 for high risk) : {}'.format(output))
 
 if __name__ == "__main__":
     app.run(debug=True)

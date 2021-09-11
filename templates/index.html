@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>heart failure Predictor</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+ <div class="login">
+	<h1>Predict the risk of heart failure</h1>
+     <h3> Enter the following values to predict the risk of heart failure</h3>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+		<p>Age<p>
+    	<input type="text" name="age" placeholder="Age" required="required" />
+		<p>anaemia (0 for NO , 1 for Yes)</p>
+        <input type="text" name="anaemia" placeholder="Anaemia" required="required" />
+		<p>creatinine phosphokinase (CPK): level of the CPK enzyme in the blood (mcg/L)</p>
+		<input type="text" name="fuelcreatinine_phosphokinase" placeholder="creatinine phosphokinase (CPK)" required="required" />
+		<p>diabetes (0 for NO , 1 for Yes)</p>
+		<input type="text" name="diabetes" placeholder="diabetes" required="required" />
+		<p> ejection fraction: percentage of blood leaving the heart at each contraction (percentage)</p>
+		<input type="text" name="ejection_fraction" placeholder="ejection fraction" required="required" />
+		<p>high blood pressure (0 for NO , 1 for Yes)</p>
+		<input type="text" name="high_blood_pressure" placeholder="high blood pressure" required="required" />
+		<p>platelets: platelets in the blood (kiloplatelets/mL)</p>
+		<input type="text" name="platelets" placeholder="platelets" required="required" />
+		<p>serum creatinine: level of serum creatinine in the blood (mg/dL) </p>
+		<input type="text" name="serum_creatinine" placeholder="serum creatinine" required="required" />
+		<p>serum sodium: level of serum sodium in the blood (mEq/L)</p>
+		<input type="text" name="serum_sodium" placeholder="serum sodium" required="required" />
+		<p>Sex (0 for male ,1 for female)</p>
+		<input type="text" name="sex" placeholder="sex" required="required" />
+		<p>Smoking (0 for NO , 1 for Yes)</p>
+		<input type="text" name="smoking" placeholder="smoking" required="required" />
+        <button type="submit" class="btn">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>

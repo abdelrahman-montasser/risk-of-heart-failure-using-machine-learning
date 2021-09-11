@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <title>heart failure Predictor</title>
-  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
@@ -17,7 +18,7 @@
 	<h1>Predict the risk of heart failure</h1>
      <h3> Enter the following values to predict the risk of heart failure</h3>
 
-     <!-- Main Input For Receiving Query to our ML -->
+     
     <form action="{{ url_for('predict')}}"method="post">
 		<p>Age<p>
     	<input type="text" name="age" placeholder="Age" required="required" />

@@ -32,13 +32,13 @@
 
 <body>
 	<div style="text-align:center">
-		 <b> {{ prediction_text }} </b>
+		 
 	</div>
  <div class="input-body">
 	<h1>Predict the risk of heart failure</h1>
      <h3> Enter the following values to predict the risk of heart failure</h3>
 
-     
+     <p><b style="color:#e600e6">{{ prediction_text }}</b></p>
     <form action="{{ url_for('predict')}}"method="post">
 		<p>Age<p>
     	<input type="text" name="age" placeholder="Age" required="required" />
@@ -67,7 +67,7 @@
 
    <br>
    <br>
-	 <b> {{ prediction_text }} </b>
+	 
 
  </div>
 

@@ -23,7 +23,7 @@ body {
 	height:100%;
 	font-family: 'Open Sans', sans-serif;
 	background: #331952;
-	background: url('https://software-eng.net/heart.png');
+	background: url('https://software-eng.net/heart.png')no-repeat ;
 	color: #fff;
 	font-size: 18px;
 	text-align:center;

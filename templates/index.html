@@ -25,27 +25,27 @@
      <p><b style="color:#e600e6">{{ prediction_text }}</b></p>
     <form action="{{ url_for('predict')}}"method="post">
 		<p>Age<p>
-    	<input type="text" name="age" placeholder="Age" required="required" />
+    	<input type="number" name="age" placeholder="Age" required="required" />
 		<p>anaemia (0 for NO , 1 for Yes)</p>
-        <input type="text" name="anaemia" placeholder="Anaemia" required="required" />
+        <input type="number" name="anaemia" placeholder="Anaemia" required="required" />
 		<p>creatinine phosphokinase (CPK): level of the CPK enzyme in the blood (mcg/L)</p>
-		<input type="text" name="fuelcreatinine_phosphokinase" placeholder="creatinine phosphokinase (CPK)" required="required" />
+		<input type="number" name="fuelcreatinine_phosphokinase" placeholder="creatinine phosphokinase (CPK)" required="required" />
 		<p>diabetes (0 for NO , 1 for Yes)</p>
-		<input type="text" name="diabetes" placeholder="diabetes" required="required" />
+		<input type="number" name="diabetes" placeholder="diabetes" required="required" />
 		<p> ejection fraction: percentage of blood leaving the heart at each contraction (percentage)</p>
-		<input type="text" name="ejection_fraction" placeholder="ejection fraction" required="required" />
+		<input type="number" name="ejection_fraction" placeholder="ejection fraction" required="required" />
 		<p>high blood pressure (0 for NO , 1 for Yes)</p>
-		<input type="text" name="high_blood_pressure" placeholder="high blood pressure" required="required" />
+		<input type="number" name="high_blood_pressure" placeholder="high blood pressure" required="required" />
 		<p>platelets: platelets in the blood (kiloplatelets/mL)</p>
-		<input type="text" name="platelets" placeholder="platelets" required="required" />
+		<input type="number" name="platelets" placeholder="platelets" required="required" />
 		<p>serum creatinine: level of serum creatinine in the blood (mg/dL) </p>
-		<input type="text" name="serum_creatinine" placeholder="serum creatinine" required="required" />
+		<input type="number" name="serum_creatinine" placeholder="serum creatinine" required="required" />
 		<p>serum sodium: level of serum sodium in the blood (mEq/L)</p>
-		<input type="text" name="serum_sodium" placeholder="serum sodium" required="required" />
+		<input type="number" name="serum_sodium" placeholder="serum sodium" required="required" />
 		<p>Sex (1 for male ,0 for female)</p>
-		<input type="text" name="sex" placeholder="sex" required="required" />
+		<input type="number" name="sex" placeholder="sex" required="required" />
 		<p>Smoking (0 for NO , 1 for Yes)</p>
-		<input type="text" name="smoking" placeholder="smoking" required="required" />
+		<input type="number" name="smoking" placeholder="smoking" required="required" />
         <button type="submit" class="btn">Predict</button>
     </form>
 
